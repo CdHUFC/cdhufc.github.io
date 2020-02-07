@@ -68,16 +68,29 @@ nav ul :hover{
 
 header{
 	background-image:url('Imagens/cdhlogo2.png');
-	background-size: cover;
+	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
-	color: #4d4d4d;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
-	padding: 250px;
-	font-size: 15pt;
+}
+
+#logo{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+#logo img{
+	width: 30%;
+}
+
+#logo p{
+	margin-top: 16px;
+	margin-bottom: 0px;
 }
 
 #cdhHeader{
@@ -86,8 +99,7 @@ header{
 	align-items: center;
 	text-align: center;
 	font-size: 15pt;
-	padding-top: 50px;
-	padding-bottom: 0px;
+	padding-bottom: 20px;
 }
 
 #cdhHeader h1{
@@ -112,6 +124,10 @@ header{
 	color: #4d4d4d;
 }
 
+.container-fluid{
+	padding: 0;
+}
+
 /* Quem somos */
 
 #quemsomos{
@@ -125,6 +141,7 @@ header{
 	text-align: center;
 	padding: 100px 100px 100px;
 	color: #f1f1f1;
+	box-sizing:content-box;
 }
 
 #quemsomos .botao{
@@ -139,20 +156,19 @@ header{
 }
 
 /* Minicursos */
-
 #minicursos{
-	padding: 20px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	margin: 20px;
 }
 
-#minicursos div{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-	margin-top: 30px;
+#minicursos img{
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+#linkVerilog{
+	padding-top: 145px;
 }
 
 /* Contato */
@@ -162,7 +178,14 @@ header{
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
-	padding-top: 20px;
+}
+
+#contato img{
+	margin: 10px;
+}
+
+#logoContatos{
+	padding-bottom: 20px;
 }
 
 /* Footer */
@@ -197,7 +220,7 @@ footer{
 		margin: 0 auto;
 		min-height: 250px;
 	}
-	
+
 	/* Quem Somos */
 	
 	#quemsomos{
@@ -209,24 +232,16 @@ footer{
 	
 	/* Minicursos */
 	
-	#minicursos{
-		flex-direction: row;
-		flex-wrap: wrap;
-		align-items: flex-start;
-		max-width: 1000px;
-		margin: 0 auto;
-	}
 	
 	#minicursos h2{
 		text-align: center;
 		width: 100%;
 	}
-	
-	#minicursos div{
-		flex-grow: 1;
-		flex-basis: 150px;
-		padding: 0 10px;
+
+	#ementa{
+		padding-left: 60px;
 	}
+	
 	
 	/* Contato */
 	
@@ -234,7 +249,6 @@ footer{
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: center;
-		max-width: 500px;
 		margin: 0 auto;
 	}
 	
@@ -242,4 +256,15 @@ footer{
 	#contato p{
 		width: 100%;
 	}
+}
+
+@media screen and (max-width: 480px){
+	#logo img{
+		width: 50%;
+	}
+
+	#ementa{
+		font-size: 11pt;
+	}
+
 }
